@@ -1,27 +1,43 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/Feather';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 // import logo from '../../assets/mmLogo.jpg';
 
-const menu = <Icon name="menu" size={15} color="red" />;
+const menu = <Icon name="menu" size={22} color="#222222" />;
+const cart = <AntDesign name="shoppingcart" size={22} color="#222222" />;
 
 const Header = () => {
+  const handleMenubutton = () => {
+    console.log('menu button pressed');
+  };
+  const handleCartbutton = () => {
+    console.log('cart button pressed');
+  };
   return (
     <View style={styles.container}>
-      <View style={styles.icon1}>
-        <Text>
-          <Icon name="menu" size={22} color="#222222" />
-        </Text>
-      </View>
+      <Pressable
+        onPress={() => {
+          handleMenubutton();
+        }}>
+        <View style={styles.icon1}>
+          <Text>{menu}</Text>
+        </View>
+      </Pressable>
       <View style={styles.logo}>
         <Image
           source={require('../../assets/logo.png')}
           style={styles.imageStyle}
         />
       </View>
-      <View style={styles.icon2}>
-        <Icon name="menu" size={22} color="#222222" />
-      </View>
+      <Pressable
+        onPress={() => {
+          handleCartbutton();
+        }}>
+        <View style={styles.icon2}>
+          <Text>{cart}</Text>
+        </View>
+      </Pressable>
     </View>
   );
 };

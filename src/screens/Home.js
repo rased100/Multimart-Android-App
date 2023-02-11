@@ -1,6 +1,7 @@
 import {Pressable, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Header from '../CustomComponents/Header';
+import Search from '../CustomComponents/Search';
 
 const Home = ({navigation}) => {
   const handleButton = () => {
@@ -9,14 +10,9 @@ const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Header />
-      <Text>Home Page</Text>
-      <Pressable
-        style={styles.button}
-        onPress={() => {
-          handleButton();
-        }}>
-        <Text style={{color: '#FFFFFF'}}>Login 123</Text>
-      </Pressable>
+      <View style={styles.searchCont}>
+        <Search />
+      </View>
     </View>
   );
 };
@@ -25,17 +21,12 @@ export default Home;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
+    // flex: 1,
+    // alignItems: 'center',
     // justifyContent: 'center',
+    marginHorizontal: 10,
   },
-  button: {
-    width: 100,
-    height: 34,
-    backgroundColor: '#222222',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 5,
+  searchCont: {
     marginTop: 10,
   },
 });
