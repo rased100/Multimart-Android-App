@@ -26,7 +26,7 @@ export default Search;
 
 const styles = StyleSheet.create({
   searchCont: {
-    backgroundColor: '#D3D3D3',
+    backgroundColor: 'rgba(65, 189, 165, .3)', // #41BDA5'
     borderRadius: 25,
   },
   input: {
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   searchIcon: {
     position: 'absolute',
     left: 15,
-    top: 12, // total height 40, icon height 16, so 50% is 40/2 = 20 - (16/2) = 12
+    top: 12, // total height 40, icon height 16, so 50% is (40/2) - (16/2) = 12
   },
   micIcon: {
     position: 'absolute',

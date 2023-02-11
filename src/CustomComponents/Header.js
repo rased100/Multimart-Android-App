@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   },
   icon1: {
     padding: 5,
-    backgroundColor: '#D3D3D3',
+    backgroundColor: 'rgba(65, 189, 165, .3)',
     borderRadius: 25,
     // flex: 1,
     // justifyContent: 'center',
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   },
   icon2: {
     padding: 5,
-    backgroundColor: '#D3D3D3',
+    backgroundColor: 'rgba(65, 189, 165, .3)',
     borderRadius: 25,
     // flex: 1,
     // justifyContent: 'center',
